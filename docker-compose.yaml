@@ -1,0 +1,16 @@
+name: sql-test
+version: "3.9"
+services:
+  postgres:
+    image: postgres:15.2
+    environment:
+      POSTGRES_DB: "db"
+      POSTGRES_USER: "db"
+      POSTGRES_PASSWORD: "db"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data: { }
